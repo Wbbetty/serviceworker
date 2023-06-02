@@ -18,7 +18,7 @@
     logMsg('支持service worker')
     //为了减少性能损耗，一般直接在onload事件里面注册
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js', { scope: "/",})
+      navigator.serviceWorker.register('./sw.js', { scope: "/serviceworker/",})
         .then(function(registration){
           //注册成功
           document.getElementById('app').innerHTML = '注册成功'
